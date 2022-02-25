@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <canvas width = "600" height ="400"></canvas>
+
+        <script>
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+            var quadradosIndesejaveis = 1;
+
+            function desenhaQuadrado(x, y, tamanho, repeticoes, cor){
+                 
+                for(var i = repeticoes-quadradosIndesejaveis; i > 0; i--){
+                    pincel.fillStyle= cor;
+                    pincel.fillRect(x, y, tamanho, tamanho);
+                    x += 90;
+                }
+
+                x = 0;
+
+                for(var i = repeticoes; i > 0; i--){
+                    pincel.strokeStyle = "black";
+                    pincel.strokeRect(x, y, tamanho, tamanho);
+                    x += 90;
+                }
+            }
+
+            desenhaQuadrado(0, 0, 90, 5, "blue");
+        </script>
+    </body>
+</html>

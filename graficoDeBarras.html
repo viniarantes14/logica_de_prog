@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+       <h1>Grafico de Barras</h1>
+       <h2>Legenda:</h2>
+       <p>.Azul: Chrome</p>
+       <p>.Vermelho: Firefox</p>
+       <p>.Verde: Safari</p>
+       <p>.Roxo: Outros</p>
+        
+
+        <canvas width="600" height="400"></canvas>
+
+        <script>
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+            var altura = 400;
+            var largura = 90;
+            var xInicial = 0;
+            var yInicial = 0;
+
+            function criaGraficoDeBarras (x, y, largura, tamanho, cor) {
+                pincel.fillStyle = cor;
+                pincel.fillRect(x, y, largura, tamanho);
+            }
+
+            criaGraficoDeBarras (xInicial, yInicial, largura,  0.5 *altura, "blue");
+            criaGraficoDeBarras (xInicial, 0.5*altura, largura,  0.25 *altura, "red");
+            criaGraficoDeBarras (xInicial, 0.75*altura, largura,  0.20 *altura, "green");
+            criaGraficoDeBarras (xInicial, 0.95*altura, largura,  0.05 *altura, "purple");
+          
+            criaGraficoDeBarras (xInicial + 140, yInicial, largura,  0.65 *altura, "blue");
+            criaGraficoDeBarras (xInicial + 140, 0.65*altura, largura,  0.20 *altura, "red");
+            criaGraficoDeBarras (xInicial + 140, 0.85*altura, largura,  0.13 *altura, "green");
+            criaGraficoDeBarras (xInicial + 140, 0.98*altura, largura,  0.02 *altura, "purple");
+        </script>
+    </body>
+</html>

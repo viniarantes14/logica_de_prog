@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">    
+    </head>
+
+    <body>
+        <canvas class="canvas" width="600" height="400"></canvas>
+       
+        <script>
+
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+            var largura = 600;
+            var altura = 400;
+            var raio = 20;
+
+            pincel.fillStyle="lightgrey";
+            pincel.fillRect(0,0,largura,altura);
+
+            function criaCirculo(x, y, raio, cor){
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.moveTo(x,y)
+                pincel.arc(x, y, raio, 2 * 3,14);
+                pincel.fill();
+            }
+            
+            criaCirculo(largura/2, altura/2, raio, "blue");
+            criaCirculo(largura/2 + 2 * raio, altura/2, raio, "red");
+            criaCirculo(largura/2 - 2 * raio, altura/2, raio, "yellow");
+            criaCirculo(largura/2, altura/2 + 2 * raio, raio, "purple");
+            criaCirculo(largura/2, altura/2 - 2 * raio, raio, "pink");
+
+            pincel.fillStyle ="green";
+            pincel.fillRect(largura/2 - 10, altura/2 + 3*raio, 20 , altura);
+        </script>
+
+    </body>
+
+</html>

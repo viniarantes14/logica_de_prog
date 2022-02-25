@@ -1,0 +1,40 @@
+<meta charset= UTF-8>
+
+<script>
+
+function espacamento(){
+
+    document.write("<br><br>");
+    
+}
+
+function exibeNaTela(parametro){
+    
+    document.write(parametro);
+    espacamento();
+}
+
+var range = parseInt(prompt("Insira o intervalo"));
+
+var misteriousNumber = Math.round(Math.random() * range);
+console.log(misteriousNumber);
+
+var userNumber = -1;
+
+while(userNumber != misteriousNumber){
+
+    var userNumber = parseInt(prompt("Tente advinhar o valor:"));
+
+    if(userNumber < misteriousNumber){
+
+        alert("O número é maior");
+    }
+    else{
+        alert("O número é menor");
+    }
+    
+}
+
+exibeNaTela("Você acertou, o número era: " + misteriousNumber);
+
+</script>

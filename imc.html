@@ -1,0 +1,35 @@
+<meta charset= utf-8>
+
+<script>
+
+function espacamento() {
+
+    document.write("<br><br>");
+    
+}
+
+function exibeNaTela (parametro){
+    
+    document.write(parametro);
+    espacamento();
+}
+
+function calculaIMC (peso, altura){
+
+    var imc = peso/(altura * altura);
+    exibeNaTela("O IMC calculado é: ");
+    exibeNaTela(imc);
+
+}
+
+var alturaVini = 1.78;
+var pesoVini = 80;
+
+calculaIMC(pesoVini, alturaVini);
+
+var alturaRoxxie = 1.64;
+var pesoRoxxie = 226.9;
+
+calculaIMC(pesoRoxxie, alturaRoxxie);
+
+</script>

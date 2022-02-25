@@ -1,0 +1,69 @@
+<meta charset= UTF-8>
+
+<script>
+
+function espacamento(){
+
+    document.write("<br><br>");
+    
+}
+
+function exibeNaTela(parametro){
+    
+    document.write(parametro);
+    espacamento();
+}
+
+var count = 0;
+var exibitionNumber = 0;
+
+exibeNaTela("EXERCÍCIO 1: ");
+
+while(count <= 50){
+    
+    exibeNaTela(exibitionNumber)
+    
+    exibitionNumber += 2;
+    count += 1;
+}
+
+exibitionNumber = 30;
+
+exibeNaTela("EXERCÍCIO 2: ");
+
+while(exibitionNumber <= 40){
+    
+    if(exibitionNumber != 33 && exibitionNumber != 37){
+        
+        exibeNaTela(exibitionNumber)
+    }
+    
+    exibitionNumber += 1;
+}
+
+exibeNaTela("EXERCÍCIO 3: ");
+
+exibitionNumber = 20;
+
+while(exibitionNumber >= 0){
+
+    exibeNaTela(exibitionNumber);
+    exibitionNumber -= 1;
+}
+
+exibeNaTela("EXERCÍCIO 4: ");
+
+exibitionNumber = 1930;
+
+var limite = parseInt(prompt("Insira o ano para ver todas as copas até ele: "));
+
+while(exibitionNumber <= limite){
+
+    exibeNaTela(exibitionNumber + " tem copa");
+
+    exibitionNumber += 4;
+}
+
+exibeNaTela("FIM!")
+
+</script>

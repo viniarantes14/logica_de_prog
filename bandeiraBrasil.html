@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <canvas width="600" height="400"></canvas>
+
+        <script>
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+            var larguraInicial = 0;
+            var alturaInicial = 0;
+            var largura = 600;
+            var altura = 400;
+
+            pincel.fillStyle="green";
+            pincel.fillRect(larguraInicial, alturaInicial, largura, altura);
+
+            pincel.fillStyle = "yellow";
+            pincel.beginPath();
+            pincel.moveTo(largura/2, altura);
+            pincel.lineTo(largura, altura/2);
+            pincel.lineTo(largura/2, alturaInicial);
+            pincel.lineTo(larguraInicial, altura/2);
+            pincel.fill();
+
+            pincel.fillStyle="darkblue";
+            pincel.beginPath();
+            pincel.moveTo(largura/2,altura/2)
+            pincel.arc(largura/2, altura/2, 110, 360, 2 * 3,14);
+            pincel.fill();
+        </script>
+    </body>
+</html>

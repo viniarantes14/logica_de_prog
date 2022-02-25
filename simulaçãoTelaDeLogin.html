@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+
+
+
+<dialog id="dialog1" class ="dialog">
+
+    <form method="dialog">
+      
+        <p>Seus dados serão armazenados no Local Storege</p>
+        
+        <p></p>
+        
+        <p>Por favor Insira:</p>
+
+        <p for="loggin">Email:<p>
+      
+        <input id = 'email' className ='text_area' required></input>  
+
+    
+        <p for ="loggin">Senha:</p>
+      
+        <input id = 'senha' className = 'text_area' type="password" required></input>
+        <input type="checkbox" onclick="showPassword()" >Exibir Senha</input>
+        
+      
+    </form>
+
+    <p style="display: hidden"></p>
+
+    <input type= "submit" onClick="salvarInformações('email, senha')" id= "send"></button>
+
+</dialog>
+
+<button id = 'login'; onclick = "openDialog()">Login</button>
+
+<script>
+
+const submitButton = document.querySelector('#submit');
+const resultsEmail = document.getElementById('email');
+const resultsSenha = document.getElementById('senha');
+
+  function openDialog() {
+
+    var trigger = document.getElementById('login');
+    
+      trigger.addEventListener('click', function() {
+      dialog1.showModal();
+
+    });
+  }
+
+  function salvarInformações() {
+    
+    document.addEventListener("keypress", function(e){
+
+        if(e.key === "Enter"){
+    
+            const btn = this.querySelector("#send");
+            btn.click();
+        
+        }
+    
+    });
+
+    localStorage.setItem("email",document.getElementById('email').value);
+    localStorage.setItem("senha",document.getElementById('senha').value);
+
+    resultsEmail.value = '';
+    resultsSenha.value = '';
+    
+    dialog1.close();
+    
+
+  };
+
+  function showPassword(){
+
+    var statusPassword = document.getElementById('senha');
+    if(senha.type == "password"){
+        senha.type = "text";
+    }else{
+        senha.type = "password";
+    }
+  }
+
+   
+</script>

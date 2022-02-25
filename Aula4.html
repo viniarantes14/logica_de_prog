@@ -1,0 +1,55 @@
+<meta charset= utf-8>
+
+<script>
+
+function espaçamento(){
+
+    document.write("<br><br>");
+    
+}
+
+function exibeNaTela(parametro){
+    
+    document.write(parametro);
+    espaçamento();
+}
+
+
+//Gasolina
+var consumo = 40;
+var distanciaPercorrida= 480;
+var rendimento = distanciaPercorrida/consumo;
+
+
+exibeNaTela("<big>O rendimento com gasolina é: </big>" );
+exibeNaTela(rendimento + " km/l");
+
+
+//Alcool
+distanciaPercorrida= 300;
+rendimento = distanciaPercorrida/consumo;
+
+
+exibeNaTela("<big>O rendimento com alcool é:</big>");
+exibeNaTela(rendimento + " km/l");
+
+
+//dif de idade
+var minhaIdade = 20;
+var idadeIrmao = 17;
+var dif = minhaIdade - idadeIrmao;
+
+
+exibeNaTela("<big>Calculo da diferença das idades:</big>")
+exibeNaTela(dif + " anos" );
+
+
+var diferençaDeAno = 2021 - 1500;
+var idadeParaFilhos = 28;
+var numeroDeGerações = diferençaDeAno / idadeParaFilhos;
+
+
+exibeNaTela("<big>O número de gerações Brasileiras é:</big>");
+exibeNaTela( Math.round(numeroDeGerações) + " gerações");
+
+</script>
